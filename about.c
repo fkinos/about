@@ -226,21 +226,6 @@ draw_icn (int x, int y, unsigned char *sprite, unsigned int color)
   }
 }
 
-static void
-draw_line (int ax, int ay, int bx, int by, unsigned int color)
-{
-  int dx = abs (bx - ax), sx = ax < bx ? 1 : -1;
-  int dy = -abs (by - ay), sy = ay < by ? 1 : -1;
-  int err = dx + dy, e2;
-  for (;;) {
-    draw_pixel (ax, ay, color);
-    if (ax == bx && ay == by) break;
-    e2 = 2 * err;
-    if (e2 >= dy) err += dy, ax += sx;
-    if (e2 <= dx) err += dx, ay += sy;
-  }
-}
-
 void
 draw_letter (int x, int y, int letter, unsigned int color)
 {
@@ -339,7 +324,7 @@ int
 string_pixel_length (char *string)
 {
   int i;
-  int label_width;
+  int label_width = 0;
 
   for (i = 0; i < strlen (string); i++) {
     label_width += width[string[i] - 32] + 2;
