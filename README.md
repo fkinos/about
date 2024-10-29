@@ -1,4 +1,4 @@
-# About 
+# Smol 
 
 Smol is a small collection of small applications for your desktop.
 
