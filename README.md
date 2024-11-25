@@ -2,18 +2,11 @@
 
 Smol is a small collection of small applications for your desktop.
 
-![preview](preview.png)
+![Screencast of files program](files.gif)
 
-## Build
+![Screencast of PETSCII paint program](paint.gif)
 
-Clone, and run `make`.
+![Screencast of calendar program](cal.gif)
 
-```
-make
-```
+![Screencast of clock program](clock.gif)
 
-## Run
-
-```
-./about
-```
